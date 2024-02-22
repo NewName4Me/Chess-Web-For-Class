@@ -1,0 +1,10 @@
+/*
+aqui establezco algunos valores que se repiten muchas veces
+*/
+:root{
+    --mainColor:black;
+    --secondColor:rgb(14,14,14);
+    --thirdColor:rgb(33,33,33);
+    --fontMainColor:white;
+    --detailsColor:magenta;
+}
