@@ -1,0 +1,177 @@
+html{
+    scroll-behavior: smooth;
+}
+main>*{
+    margin: 1rem;
+    margin-left:0 ;/*para que no este tan alejado de mi barra lateral*/
+    position: relative;
+}
+
+/*barra de buscar*/
+.buscar{
+    width: 35%;
+    text-align: center;
+    padding: 2rem;
+    float: right;
+    position: relative;
+    margin-right:  3rem;
+}
+input[type=search]{
+    height: 2rem;
+    border: 1px solid var(--detailsColor);
+    padding: 1rem;
+    border-radius:10px 0 0 10px ;
+}
+input[type="search"]:focus,
+input[type="search"]:active { /*para quitarle el borde feo que tiene predetermianod*/
+    outline: none;
+}
+main i{
+    background: var(--detailsColor);
+    padding: 0.42rem;
+    position: absolute;
+    border-radius: 0 10px 10px 0;
+}
+article a,section a{
+    text-decoration: none;
+    color: white;
+}
+
+/*tabla al comienzo indicando mejores jugadores*/
+table{
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    background: var(--mainColor);
+    padding: 1rem;
+    border-radius: 16px;
+    border-spacing: 1rem;
+}
+table img{
+    width: 15%;
+    margin-right:0.5rem ;
+}
+table tfoot{
+    text-align: center;
+}
+address{
+    display: inline-block;
+}
+/*categorias de torneos*/
+section{
+    background:var(--mainColor) ;
+    float: left;
+    padding: 0.5rem;
+    border-radius: 16px;
+}
+section li{
+    padding: 0.5rem;
+}
+section li:hover{
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: underline var(--detailsColor);
+    text-decoration-thickness:2px;
+}
+
+/*pdf con info de un torneo en particular*/
+article{
+    float: right;
+    background: var(--mainColor);
+    padding: 1rem;
+    border-radius: 16px;
+
+    column-count: 2;  
+    column-gap: 1rem;  
+}
+#clasica{
+    break-inside: avoid-column; /*para impedir que parte de la información se combine con la otra columna*/
+}
+iframe{
+    height: 75vh;
+    width: 100%;
+    border:var(--mainColor);
+    border-radius: 16px;
+}
+
+/*intentar poner botones magentas*/
+main h3{
+    margin-left: 1.5rem;
+}
+article li{
+    list-style: none;
+}
+article li::before {
+    content: ""; 
+    display: inline-block;
+    width: 1rem;
+    height: 1rem; 
+    border-radius: 50%; 
+    background-color: var(--detailsColor);
+    margin-right: 0.75rem; 
+}
+
+
+/*botones bajo nuestro pdf*/
+audio{
+    position: absolute;
+    top: 7%;
+    right: 1.75%;
+    border-radius: 16px 0 0 16px;
+}
+.iframeConBotones{
+    text-align: center;
+}
+.iframeConBotones button,.iframeConBotones .verUbicacion{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 16px;
+    width: 10rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+.iframeConBotones details{
+    position: relative;
+    display: inline-block; /*para que ambos botones se alineen perfectamente*/
+}
+.mapa{
+    position: absolute;
+    top: 100%;
+    left: -165%;
+    z-index: 1;
+    width: 300%;
+    height: 260%;
+}
+.iframeConBotones .DescagarPdf{
+    color: var(--fontMainColor);
+    background: 2px solid var(--fontMainColor);
+    background: rgba(0, 0, 0, 0); /*asi hago un fondo transparente*/
+    margin: 0 0.5rem;
+}
+.iframeConBotones .verUbicacion{
+    color: var(--fontMainColor);
+    background: var(--detailsColor) ;
+    border: 2px solid var(--detailsColor); 
+}
+.iframeConBotones .verUbicacion:hover{
+    transition: all 0.1s ease;
+    background:purple;
+    scale: 1.1;
+}
+.iframeConBotones .DescagarPdf:hover{
+    transition: all 0.1s ease;
+    background:var(--fontMainColor);
+    scale: 1.1;
+    color: var(--mainColor);
+    border:2px solid var(--mainColor);
+}
+.iframeConBotones button:first-of-type:hover a{
+    color: var(--mainColor);
+}
+
+
+/*coso del tiempo*/
+.widgetTiempo{
+   border-radius: 16px;
+}
